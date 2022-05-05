@@ -279,4 +279,7 @@ cython_debug/
 
 day-summary/
 .coverage
+*.checkpoint
 *.checkpoints
+ingestao_backup.py
+ingestaoteste.py
