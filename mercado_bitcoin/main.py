@@ -3,12 +3,12 @@ import time
 from schedule import repeat, every, run_pending
 
 from mercado_bitcoin.ingestors import DaySummaryIngestor
-from mercado_bitcoin.writers import DataWriter
+from mercado_bitcoin.writers import DataWriter, S3DataWriter
 
 
 if __name__ == "__main__":
     day_summary_ingestor = DaySummaryIngestor(
-        writer=DataWriter,
+        writer=S3DataWriter,
         coins=["BTC", "ETH", "LTC", "BCH"],
         default_start_date=datetime.date(2021, 6, 19)
     )
